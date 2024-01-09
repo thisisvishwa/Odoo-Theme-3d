@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 3DWebDevPortfolio_v17\n"
+"POT-Creation-Date: 2023-04-01 12:00+0000\n"
+"PO-Revision-Date: 2023-04-01 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Odoo\n"
+
+#. module: 3d_web_dev_portfolio_v17
+#: model:ir.ui.view,arch_db:3d_web_dev_portfolio_v17.template_header
+msgid "Home"
+msgstr ""
+
+#. module: 3d_web_dev_portfolio_v17
+#: model:ir.ui.view,arch_db:3d_web_dev_portfolio_v17.template_header
+msgid "Projects"
+msgstr ""
+
+#. module: 3d_web_dev_portfolio_v17
+#: model:ir.ui.view,arch_db:3d_web_dev_portfolio_v17.template_header
+msgid "About"
+msgstr ""
+
+#. module: 3d_web_dev_portfolio_v17
+#: model:ir.ui.view,arch_db:3d_web_dev_portfolio_v17.template_header
+msgid "Contact"
+msgstr ""
+
+#. module: 3d_web_dev_portfolio_v17
+#: model:ir.ui.view,arch_db:3d_web_dev_portfolio_v17.template_home_page
+msgid "Welcome to my 3D Web Development Portfolio"
+msgstr ""
+
+#. module: 3d_web_dev_portfolio_v17
+#: model:ir.ui.view,arch_db:3d_web_dev_portfolio_v17.template_projects_page
+msgid "Filter by:"
+msgstr ""
+
+#. module: 3d_web_dev_portfolio_v17
+#: model:ir.ui.view,arch_db:3d_web_dev_portfolio_v17.template_about_page
+msgid "Biography"
+msgstr ""
+
+#. module: 3d_web_dev_portfolio_v17
+#: model:ir.ui.view,arch_db:3d_web_dev_portfolio_v17.template_about_page
+msgid "Skills"
+msgstr ""
+
+#. module: 3d_web_dev_portfolio_v17
+#: model:ir.ui.view,arch_db:3d_web_dev_portfolio_v17.template_contact_page
+msgid "Name"
+msgstr ""
+
+#. module: 3d_web_dev_portfolio_v17
+#: model:ir.ui.view,arch_db:3d_web_dev_portfolio_v17.template_contact_page
+msgid "Email"
+msgstr ""
+
+#. module: 3d_web_dev_portfolio_v17
+#: model:ir.ui.view,arch_db:3d_web_dev_portfolio_v17.template_contact_page
+msgid "Subject"
+msgstr ""
+
+#. module: 3d_web_dev_portfolio_v17
+#: model:ir.ui.view,arch_db:3d_web_dev_portfolio_v17.template_contact_page
+msgid "Message"
+msgstr ""
+
+#. module: 3d_web_dev_portfolio_v17
+#: model:ir.ui.view,arch_db:3d_web_dev_portfolio_v17.template_contact_page
+msgid "Send"
+msgstr ""
+
+#. module: 3d_web_dev_portfolio_v17
+#: model:ir.ui.view,arch_db:3d_web_dev_portfolio_v17.template_contact_page
+msgid "Follow me on social media"
+msgstr ""

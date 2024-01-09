@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_3d_web_dev_portfolio_user,3d_web_dev_portfolio.user,model_3d_web_dev_portfolio_v17,base.group_user,1,0,0,0
+access_3d_web_dev_portfolio_manager,3d_web_dev_portfolio.manager,model_3d_web_dev_portfolio_v17,base.group_system,1,1,1,1

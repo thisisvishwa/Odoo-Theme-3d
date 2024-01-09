@@ -1,0 +1,126 @@
+<odoo>
+    <template id="layout" name="3D Web Developer Portfolio Layout">
+        <t t-call="website.layout">
+            <div id="wrap" class="o_theme_3d_web_dev_portfolio">
+                <header>
+                    <div class="navbar navbar-expand-md navbar-light">
+                        <t t-set="logo_image" t-value="website.logo_url if website.logo_url else '/web/static/src/img/logo2.png'"/>
+                        <a href="/" class="navbar-brand">
+                            <img src="/static/src/img/logo.png" alt="Logo" class="header-logo"/>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarContent">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a href="#home" class="nav-link">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#projects" class="nav-link">Projects</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#about" class="nav-link">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#contact" class="nav-link">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+                <main>
+                    <t t-raw="0"/>
+                </main>
+                <footer>
+                    <div class="container">
+                        <span>© 2023 by 3D Web Developer. Proudly created with Odoo</span>
+                    </div>
+                </footer>
+            </div>
+        </t>
+    </template>
+
+    <template id="page_home" name="Home Page" inherit_id="website.layout" primary="True">
+        <xpath expr="//main" position="inside">
+            <section id="home" class="hero-section">
+                <div class="container">
+                    <t t-call="website_slider.frontend_slider"/>
+                    <div class="intro-section">
+                        <h1>Welcome to My 3D Web Development Portfolio</h1>
+                        <p>I am a professional 3D web developer with a passion for creating immersive experiences.</p>
+                    </div>
+                </div>
+            </section>
+        </xpath>
+    </template>
+
+    <template id="page_projects" name="Projects Page" inherit_id="website.layout" primary="True">
+        <xpath expr="//main" position="inside">
+            <section id="projects" class="projects-grid">
+                <div class="container">
+                    <h2>My Projects</h2>
+                    <div class="row">
+                        <t t-foreach="projects" t-as="project">
+                            <div class="col-md-4 project-item">
+                                <img t-att-src="'/static/src/img/project_thumbnail_' + project.id + '.png'" alt="Project Thumbnail"/>
+                                <div class="project-details">
+                                    <h3 t-field="project.name"/>
+                                    <p t-field="project.description"/>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </section>
+        </xpath>
+    </template>
+
+    <template id="page_about" name="About Page" inherit_id="website.layout" primary="True">
+        <xpath expr="//main" position="inside">
+            <section id="about" class="bio-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="/static/src/img/profile_picture.png" alt="Profile Picture" class="profile-picture"/>
+                        </div>
+                        <div class="col-md-8">
+                            <h2>About Me</h2>
+                            <p class="bio">I am dedicated to pushing the boundaries of 3D web technology to create stunning and interactive experiences.</p>
+                            <ul class="skills-list">
+                                <li>WebGL</li>
+                                <li>Three.js</li>
+                                <li>Babylon.js</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </xpath>
+    </template>
+
+    <template id="page_contact" name="Contact Page" inherit_id="website.layout" primary="True">
+        <xpath expr="//main" position="inside">
+            <section id="contact" class="contact-form-section">
+                <div class="container">
+                    <h2>Contact Me</h2>
+                    <form action="/contact/submit" method="post" class="contact-form">
+                        <input type="text" name="name" placeholder="Name" required="required"/>
+                        <input type="email" name="email" placeholder="Email" required="required"/>
+                        <input type="text" name="subject" placeholder="Subject" required="required"/>
+                        <textarea name="message" placeholder="Message" required="required"></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                    <div class="social-media-links">
+                        <a href="https://www.linkedin.com/in/developer" target="_blank" class="social-link">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/developer" target="_blank" class="social-link">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </xpath>
+    </template>
+</odoo>

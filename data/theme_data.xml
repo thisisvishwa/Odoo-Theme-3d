@@ -1,0 +1,74 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Theme Template -->
+        <record id="theme_3d_web_dev_portfolio" model="ir.ui.view">
+            <field name="name">3DWebDevPortfolio_v17</field>
+            <field name="type">qweb</field>
+            <field name="arch" type="xml">
+                <t t-name="3DWebDevPortfolio_v17.layout">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure oe_empty">
+                            <t t-call="3DWebDevPortfolio_v17.header"/>
+                            <t t-raw="0"/>
+                        </div>
+                    </t t-call="website.layout">
+                </t>
+            </field>
+        </record>
+
+        <!-- Header Template -->
+        <record id="view_header" model="ir.ui.view">
+            <field name="name">3DWebDevPortfolio_v17.header</field>
+            <field name="inherit_id" ref="website.header"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="replace">
+                    <header>
+                        <div class="nav-menu">
+                            <img src="/static/src/img/logo.png" alt="Logo" class="header-logo"/>
+                            <nav>
+                                <a href="#home" class="page-scroll">Home</a>
+                                <a href="#projects" class="page-scroll">Projects</a>
+                                <a href="#about" class="page-scroll">About</a>
+                                <a href="#contact" class="page-scroll">Contact</a>
+                            </nav>
+                        </div>
+                    </header>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Footer Template -->
+        <record id="view_footer" model="ir.ui.view">
+            <field name="name">3DWebDevPortfolio_v17.footer</field>
+            <field name="inherit_id" ref="website.footer"/>
+            <field name="arch" type="xml">
+                <xpath expr="//footer" position="replace">
+                    <footer>
+                        <div class="container">
+                            <div class="copy text-center">
+                                © <t t-esc="datetime.datetime.now().year"/> - 3D Web Developer Portfolio
+                            </div>
+                        </div>
+                    </footer>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Asset Bundle -->
+        <record id="assets_frontend" model="ir.asset">
+            <field name="name">3d_web_dev_portfolio_assets_frontend</field>
+            <field name="bundle">web.assets_frontend</field>
+            <field name="glob">/static/src/scss/*.scss</field>
+            <field name="sequence">15</field>
+            <field name="directive">prepend</field>
+        </record>
+
+        <record id="assets_backend" model="ir.asset">
+            <field name="name">3d_web_dev_portfolio_assets_backend</field>
+            <field name="bundle">web.assets_backend</field>
+            <field name="glob">/static/src/js/*.js</field>
+            <field name="sequence">15</field>
+            <field name="directive">prepend</field>
+        </record>
+    </data>
+</odoo>
