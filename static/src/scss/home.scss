@@ -1,0 +1,64 @@
+// Import the primary and secondary color variables
+@import 'variables';
+
+#home {
+  // Hero Section
+  .hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('../img/hero-background.jpg') no-repeat center center;
+    background-size: cover;
+
+    // 3D Animation or Image Slider
+    .animation-slider {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  // Introduction Section
+  .intro-section {
+    padding: 2rem;
+    text-align: center;
+
+    h1 {
+      font-size: 2.5rem;
+      color: $primary-color;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: $secondary-color;
+    }
+  }
+
+  // Scroll Animations
+  .scroll-animation {
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+
+    &.in-view {
+      opacity: 1;
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: $responsiveBreakpoints) {
+  #home {
+    .hero-section {
+      height: auto;
+    }
+
+    .intro-section {
+      padding: 1rem;
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+}

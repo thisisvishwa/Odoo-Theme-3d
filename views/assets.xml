@@ -1,0 +1,21 @@
+<odoo>
+    <template id="assets_frontend" inherit_id="web.assets_frontend">
+        <xpath expr="." position="inside">
+            <!-- Stylesheets -->
+            <link rel="stylesheet" type="text/scss" href="/3DWebDevPortfolio_v17/static/src/scss/theme.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/3DWebDevPortfolio_v17/static/src/scss/home.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/3DWebDevPortfolio_v17/static/src/scss/projects.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/3DWebDevPortfolio_v17/static/src/scss/about.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/3DWebDevPortfolio_v17/static/src/scss/contact.scss"/>
+            <link rel="stylesheet" type="text/css" href="/3DWebDevPortfolio_v17/static/src/css/style.css"/>
+
+            <!-- JavaScript -->
+            <script type="text/javascript" src="/3DWebDevPortfolio_v17/static/src/js/script.js"></script>
+            <script type="text/javascript" src="/3DWebDevPortfolio_v17/static/src/js/home_animation.js"></script>
+            <script type="text/javascript" src="/3DWebDevPortfolio_v17/static/src/js/project_filter.js"></script>
+            <script type="text/javascript" src="/3DWebDevPortfolio_v17/static/src/js/scroll_animations.js"></script>
+            <script type="text/javascript" src="/3DWebDevPortfolio_v17/static/src/js/hover_effects.js"></script>
+            <script type="text/javascript" src="/3DWebDevPortfolio_v17/static/src/js/transition_effects.js"></script>
+        </xpath>
+    </template>
+</odoo>

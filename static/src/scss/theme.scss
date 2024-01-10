@@ -1,0 +1,95 @@
+// Import other SCSS files
+@import 'home.scss';
+@import 'about.scss';
+@import 'contact.scss';
+@import 'projects.scss';
+
+// Define color scheme
+$primary-color: #5b63d8; // Example primary color
+$secondary-color: #f4f4f8; // Example secondary color
+$accent-color: #e14eca; // Example accent color for interactive elements
+
+// Define typography
+$font-family: 'Roboto', sans-serif;
+$font-size-base: 16px;
+$font-size-heading: 2rem;
+$font-size-subheading: 1.5rem;
+
+// Define header height
+$header-height: 60px;
+
+// Global styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $font-size-base;
+  color: $secondary-color;
+  background-color: $primary-color;
+}
+
+a {
+  color: $accent-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Header styles
+.header-logo {
+  height: $header-height;
+  img {
+    height: 100%;
+  }
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  li {
+    padding: 0 15px;
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+  }
+}
+
+// Scroll animations
+.scroll-animation {
+  transition: all 0.3s ease-in-out;
+}
+
+// Hover effects
+.hover-effect {
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+// Transition effects
+.transition-effect {
+  transition: all 0.3s ease-in-out;
+}
+
+// Utility classes
+.text-center {
+  text-align: center;
+}
+
+// Include other SCSS partials for specific sections
+@include 'home';
+@include 'about';
+@include 'contact';
+@include 'projects';
